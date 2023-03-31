@@ -276,14 +276,17 @@ dt {
   display: flex;
   justify-content: space-between;
   margin: 124px 0 36px 0;
-  gap: 52px;
+  gap: 48px;
 }
 .footer-menu {
   display: flex;
-  gap: 98px;
+  justify-content: space-between;
+  width: 701px;
+  gap: 52px;
 }
 .menu-column-box {
   display: flex;
+  justify-content: space-between;
   gap: 52px;
 }
 .menu-column__headline {
@@ -306,7 +309,7 @@ dt {
 .menu-column__links--transform {
   gap: 21px;
 }
-.menu-column__contacts {
+.contacts {
   display: flex;
   flex-direction: column;
   text-align: right;
@@ -319,10 +322,10 @@ dt {
   line-height: 1.25;
 }
 .confidential--transform {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 .copyright--transform {
-  padding-bottom: 5px;
+  margin-bottom: 5px;
 }
 .link--decoration {
   text-decoration: underline;
@@ -410,23 +413,9 @@ dt {
   display: none;
 }
 
-/* PC */
+/* ===== media ===== */
+
 @media (max-width: 1062.98px) {
-  .wrapper {
-    max-width: 1013.98px;
-  }
-  .footer__wrap {
-    gap: 30px;
-  }
-  .footer-menu {
-    gap: 30px;
-  }
-  .menu-column-box {
-    gap: 30px;
-  }
-  .menu-column:first-child {
-    padding-right: 0;
-  }
   .nav-links {
     flex-direction: column;
     align-items: flex-end;
@@ -436,15 +425,25 @@ dt {
   }
 }
 
-/* MOBILE */
+@media (max-width: 1011.98px) {
+  .footer-menu {
+    gap: 30px;
+  }
+}
+
 @media (max-width: 948.98px) {
   .link--swap {
     order: -1;
   }
 }
 
-/* MOBILE */
-@media (max-width: 839.98px) {
+@media (max-width: 838.98px) {
+  .footer__wrap,
+  .footer-menu,
+  .menu-column-box {
+    width: 100%;
+    gap: 30px;
+  }
   .wrapper--heading {
     margin-top: 0;
   }
@@ -574,9 +573,6 @@ dt {
   .menu-column-box {
     gap: 48px;
   }
-  .menu-column--first-column {
-    max-width: 100px;
-  }
   .contacts {
     text-align: left;
     max-width: 100%;
@@ -589,14 +585,14 @@ dt {
     font-size: 14px;
     line-height: 1.21;
   }
-  .menu-column__links--text-transform {
+  .menu-column__links--transform {
     gap: 10px;
   }
   .confidential {
     text-align: left;
   }
   .confidential--transform {
-    padding-bottom: 60px;
+    margin-bottom: 60px;
   }
   .contact-list,
   .nav-logo,
